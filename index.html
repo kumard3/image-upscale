@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upscaler with ONNX.js</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #image-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        #original-img, #upscaled-img {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Upscaler using ONNX.js</h1>
+    <input type="file" id="image-upload" accept="image/*" />
+    <button id="upscale-btn">Upscale Image</button>
+
+    <div id="image-container">
+        <div>
+            <h2>Original Image</h2>
+            <img id="original-img" src="" alt="Original Image">
+        </div>
+        <div>
+            <h2>Upscaled Image</h2>
+            <canvas id="upscaled-img"></canvas>
+        </div>
+    </div>
+
+    <!-- Load ONNX Runtime Web -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+
+    <!-- Your Script -->
+    <script src="script.js"></script>
+</body>
+</html>
